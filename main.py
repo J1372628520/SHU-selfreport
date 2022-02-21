@@ -281,7 +281,7 @@ if __name__ == "__main__":
 
     if 'users' in os.environ:
         for user_password in os.environ['users'].split(';'):
-            user, password = user_password.split(',')
+            user, password = user_password.split(str=',', num=1)
             config[user] = {
                 'pwd': password
             }
